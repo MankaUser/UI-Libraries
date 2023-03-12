@@ -29,7 +29,7 @@ local Corner_5 = Instance.new("UICorner")
 local CornerFix_3 = Instance.new("Frame")
 
 MankaUI.Name = "MankaUI"
-MankaUI.Parent = game:WaitForService("CoreGui")
+MankaUI.Parent = game:GetService("CoreGui")
 MankaUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 MainMankaUI.Name = "MainMankaUI"
