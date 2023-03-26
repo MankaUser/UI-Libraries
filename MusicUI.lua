@@ -143,7 +143,7 @@ UICorner_7.Parent = TextButton
 
 PlaySoundButton.MouseButton1Click:Connect(function()
     if SoundIDbox == nil then
-       Sound.SoundId = "rbxassetid://142376088"
+       Sound.SoundId = "rbxassetid://" .. 142376088
         Sound.Volume = SoundVolume.Text
         Sound:Play()
     else
