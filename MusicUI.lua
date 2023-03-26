@@ -142,7 +142,7 @@ UICorner_7.CornerRadius = UDim.new(0, 4)
 UICorner_7.Parent = TextButton
 
 PlaySoundButton.MouseButton1Click:Connect(function()
-    if SoundIDbox.text == nil then
+    if SoundIDbox.text == "" then
        Sound.SoundId = "rbxassetid://142376088"
         Sound.Volume = SoundVolume.Text
         Sound:Play()
