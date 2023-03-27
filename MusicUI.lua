@@ -56,6 +56,8 @@ UICorner_2.Parent = SoundIDbox
 Sound.Name = "PlayableSound"
 Sound.Parent = MusicGui
 
+local SoundTime = Sound.TimeLength
+
 PlaySoundButton.Name = "PlaySoundButton"
 PlaySoundButton.Parent = MainUIFrame
 PlaySoundButton.BackgroundColor3 = Color3.fromRGB(0, 159, 26)
@@ -142,10 +144,25 @@ UICorner_7.CornerRadius = UDim.new(0, 4)
 UICorner_7.Parent = TextButton
 
 PlaySoundButton.MouseButton1Click:Connect(function()
-    if SoundIDbox.text == "" then
-       Sound.SoundId = "rbxassetid://142376088"
-        Sound.Volume = SoundVolume.Text
-        Sound:Play()
+    if SoundIDbox.text == nil then
+        local Suig = math.Random(1, 2)
+        if Suig == 1 then
+            Sound.SoundId = "rbxassetid://142376088"
+            Sound.Volume = SoundVolume.Text
+            Sound:Play()
+            wait(SoundTime)
+            Sound.SoundId = "rbxassetid://9245561450"
+            Sound.Volume = SoundVolume.Text
+            Sound:Play()
+        elseif Suig == 2 then
+            Sound.SoundId = "rbxassetid://9245561450"
+            Sound.Volume = SoundVolume.Text
+            Sound:Play()
+            wait(SoundTime)
+            Sound.SoundId = "rbxassetid://142376088"
+            Sound.Volume = SoundVolume.Text
+            Sound:Play()
+        end
     else
         Sound.SoundId = "rbxassetid://" .. SoundIDbox.Text
         Sound.Volume = SoundVolume.Text
@@ -154,6 +171,6 @@ PlaySoundButton.MouseButton1Click:Connect(function()
 end)
 
 PlaySoundButton_2.MouseButton1Click:Connect(function()
-Sound.Volume = SoundVolume.Text
+Sound.Volume = 0
 Sound:Stop()
 end)
