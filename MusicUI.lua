@@ -145,16 +145,13 @@ UICorner_7.Parent = TextButton
 
 PlaySoundButton.MouseButton1Click:Connect(function()
     if SoundIDbox.text == "" then
-        local Suig = math.Random(1, 2)
-        if Suig == 1 then
-            Sound.SoundId = "rbxassetid://142376088"
-            Sound.Volume = SoundVolume.Text
-            Sound:Play()
-        elseif Suig == 2 then
-            Sound.SoundId = "rbxassetid://9245552700"
-            Sound.Volume = SoundVolume.Text
-            Sound:Play()
-        end
+         Sound.SoundId = "rbxassetid://142376088"
+         Sound.Volume = SoundVolume.Text
+         Sound:Play()
+    wait(SoundTime)
+         Sound.SoundId = "rbxassetid://9245552700"
+         Sound.Volume = SoundVolume.Text
+         Sound:Play()
     else
         Sound.SoundId = "rbxassetid://" .. SoundIDbox.Text
         Sound.Volume = SoundVolume.Text
