@@ -56,8 +56,6 @@ UICorner_2.Parent = SoundIDbox
 Sound.Name = "PlayableSound"
 Sound.Parent = MusicGui
 
-local SoundTime = Sound.TimeLength
-
 PlaySoundButton.Name = "PlaySoundButton"
 PlaySoundButton.Parent = MainUIFrame
 PlaySoundButton.BackgroundColor3 = Color3.fromRGB(0, 159, 26)
@@ -148,7 +146,10 @@ PlaySoundButton.MouseButton1Click:Connect(function()
          Sound.SoundId = "rbxassetid://142376088"
          Sound.Volume = SoundVolume.Text
          Sound:Play()
-    wait(SoundTime)
+         wait(2)
+         local SoundTime = Sound.TimeLength
+         wait(1)
+         wait(SoundTime)
          Sound.SoundId = "rbxassetid://9245552700"
          Sound.Volume = SoundVolume.Text
          Sound:Play()
