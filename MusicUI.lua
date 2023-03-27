@@ -151,7 +151,7 @@ PlaySoundButton.MouseButton1Click:Connect(function()
             Sound.Volume = SoundVolume.Text
             Sound:Play()
         elseif Suig == 2 then
-            Sound.SoundId = "rbxassetid://9245561450"
+            Sound.SoundId = "rbxassetid://9245552700"
             Sound.Volume = SoundVolume.Text
             Sound:Play()
         end
